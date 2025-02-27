@@ -1,0 +1,29 @@
+/client/MB CHAT/node_modules
+/client/MB CHAT/.pnp
+/client/MB CHAT/.pnp.js
+
+# testing
+/client/MB CHAT/coverage
+
+# production
+/client/MB CHAT/build
+
+#firebase
+client/MB CHAT/firebase.json
+client/MB CHAT/.firebase
+client/MB CHAT/.firebaserc
+client/MB CHAT/README.md
+# misc
+
+/client/MB CHAT/.DS_Store
+/client/MB CHAT/.env.local
+/client/MB CHAT/env
+/client/MB CHAT/.env.development.local
+/client/MB CHAT/.env.test.local
+/client/MB CHAT/.env.production.local
+
+/client/MB CHAT/npm-debug.log*
+/client/MB CHAT/yarn-debug.log*
+/client/MB CHAT/yarn-error.log*
+/server/node_modules
+
