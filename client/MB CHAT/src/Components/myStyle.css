@@ -473,3 +473,89 @@
     flex: 1;
   }
 }
+
+
+/* Container animation */
+.typing-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.typing-container:hover {
+  animation: containerWiggle 0.5s ease-in-out;
+}
+
+/* Dots container styling and entrance animation */
+.dots-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Dot styling and bounce animation (just made them slightly smaller) */
+.dot {
+  width: 8px; /* Reduced from 10px */
+  height: 8px; /* Reduced from 10px */
+  background-color: black;
+  border-radius: 50%;
+  animation: dotBounce 1s infinite;
+}
+
+/* Staggered delays for sequential effect */
+.dot1 {
+  animation-delay: 0.1s;
+}
+
+.dot2 {
+  animation-delay: 0.3s;
+}
+
+.dot3 {
+  animation-delay: 0.5s;
+}
+
+/* Bounce keyframe for dots */
+@keyframes dotBounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Additional scale effect on hover over the dots container */
+.dots-container:hover .dot {
+  animation: dotScale 0.5s infinite alternate;
+}
+
+@keyframes dotScale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+/* Container wiggle on hover */
+@keyframes containerWiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Basic fadeIn and slideIn animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-10px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
